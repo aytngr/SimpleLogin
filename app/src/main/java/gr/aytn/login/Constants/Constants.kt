@@ -1,4 +1,4 @@
-package gr.aytn.login
+package gr.aytn.login.Constants
 
 object Constants {
     const val EMAIL: String = "emanat@emanat.az"

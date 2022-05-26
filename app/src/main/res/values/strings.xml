@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Login</string>
+    <string name="entry_word">Xoş Gəlmisiniz!</string>
+    <string name="info">Emailinizi və şifrənizi daxil edin.</string>
+    <string name="email">Email</string>
+    <string name="password">Şifrə</string>
+    <string name="login">Daxil ol</string>
 </resources>

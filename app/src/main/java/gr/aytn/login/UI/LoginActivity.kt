@@ -1,4 +1,4 @@
-package gr.aytn.login
+package gr.aytn.login.UI
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,8 +7,10 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.core.content.ContextCompat
+import gr.aytn.login.Constants.Constants
+import gr.aytn.login.R
 
-class MainActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -32,7 +34,7 @@ class MainActivity : AppCompatActivity() {
                 tvMessage.text = "Siz uğurla daxil oldunuz!"
                 tvMessage.background = ContextCompat.getDrawable(this,R.drawable.correct_credentials_message
                  */
-                startActivity(Intent(this,LoginSuccess::class.java))
+                startActivity(Intent(this, SecondActivity::class.java))
                 finish()
             }else{
                 if(email != correctEmail) {
@@ -42,7 +44,9 @@ class MainActivity : AppCompatActivity() {
                     etPassword.error = "Şifrə yanlışdır!"
                 }
                 tvMessage.text = "Email və ya şifrə yanlışdır!"
-                tvMessage.background = ContextCompat.getDrawable(this,R.drawable.wrong_credentials_message)
+                tvMessage.background = ContextCompat.getDrawable(this,
+                    R.drawable.wrong_credentials_message
+                )
             }
         }
     }
